@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
-app.use(express.static(path.join(__dirname, 'dist/admin/')));
+app.use(express.static(path.join(__dirname, 'dist/twilly-admin/')));
 
 app.set('port', port);
 const server = http.Server(app);
@@ -27,7 +27,7 @@ const server = http.Server(app);
 
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/admin/'));
+  res.sendFile(path.join(__dirname, 'dist/twilly-admin/'));
 });
 
 server.listen(port, () => {
