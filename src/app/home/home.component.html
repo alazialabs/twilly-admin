@@ -1,0 +1,12 @@
+<div class="grid-container">
+    <header class="header">
+        <app-header></app-header>
+    </header>
+    <aside class="sidenav">
+        <app-sidenav></app-sidenav>
+    </aside>
+    <main class="main">
+        <app-new-treatment *ngIf="showAddNew"></app-new-treatment>
+        <app-treatment *ngIf="showTreatment" [treatmentCondition]="selectedTreatmentCondition"></app-treatment>
+    </main>
+</div>

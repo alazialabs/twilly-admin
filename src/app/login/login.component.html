@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="loginForm">
+    
+<form [formGroup]="loginForm" novalidate (ngSubmit)="login(loginForm.value)">
+  <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+      <input matInput formControlName="username" autofocus>
+    </mat-form-field>
+  <br/>
+    <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+      <input matInput formControlName="password" type="password">
+    </mat-form-field>
+    <br/>
+    <button mat-stroked-button type="submit" [disabled]="!loginForm.valid">Login</button>
+</form>
+
+</div>
+  </div>

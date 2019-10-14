@@ -1,0 +1,19 @@
+<div class="new-treatment-container">
+    <div matRipple class="card">
+        <div class="card-content">
+            <span class="card-text">
+                Upload Treatment Condition CSV
+            </span>  
+            <input type="file" class="upload" (change)="fileUpload($event.target.files,'treatmentCondition')">
+        </div>
+    </div>
+
+    <div matRipple class="card">
+        <div class="card-content">
+            <span class="card-text">
+                Upload User CSV
+            </span>
+            <input type="file" class="upload" (change)="fileUpload($event.target.files,'user')">
+        </div>
+    </div>
+</div>

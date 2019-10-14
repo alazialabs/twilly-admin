@@ -1,0 +1,55 @@
+.sidenav_container{
+    box-shadow: -3px 0 10px 2px #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+    height: 100%;
+}
+
+
+.sidenav_brand_logo{
+    width:100px;
+  //   border-radius: 50%;
+}
+
+.sidenav_brand_name{
+  font-size: 20px;
+}
+
+.sidenav_brand{
+  margin-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  // border-top: 1px #e0e0e0 solid;
+}
+
+.sidenav_list{
+  display: flex;
+  flex-direction: column;
+  margin-top:20px;
+  width:100%;
+  align-items: center;
+  height: 100%;
+  overflow:auto;
+  border-top: 1px #e0e0e0 solid;
+}
+
+.sidenav_list_element{
+    // border-bottom: 1px #e0e0e0 solid;
+    flex:0 0 100px;
+    cursor: pointer;
+    width:100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: #e0e0e0;
+}
+
+.sidenav_list_element:hover{
+  background-color: #e0e0e0;
+}
