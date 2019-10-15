@@ -13,6 +13,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatRippleModule} from '@angular/material/core';
+import {MatTableModule} from '@angular/material/table';
+
 import { SidenavComponent } from './home/sidenav/sidenav.component';
 import { HeaderComponent } from './home/header/header.component';
 import { TreatmentComponent } from './home/treatment/treatment.component';
@@ -40,7 +42,8 @@ import { NewTreatmentComponent } from './home/new-treatment/new-treatment.compon
     MatSelectModule,
     MatButtonModule,
     MatSlideToggleModule,
-    MatRippleModule
+    MatRippleModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -32,6 +32,7 @@ export class SidenavComponent implements OnInit {
       .subscribe(treatmentConditions => {
         this.treatmentConditions = treatmentConditions;
         console.log(treatmentConditions);
+        this.select(this.treatmentConditions[0])
       });
   }
 }

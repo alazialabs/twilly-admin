@@ -1,4 +1,37 @@
 <div class="treatmentContainer">
     <h2>Treatment Condition {{treatmentCondition.treatmentId}}</h2>
     <mat-slide-toggle [(ngModel)]="treatmentCondition.demetricate" [disabled]="true">Allow demetrication</mat-slide-toggle>
+    <br/><br/>
+    <table mat-table [dataSource]="twitterAccounts" class="mat-elevation-z1 twitter_accounts_table">
+
+        <ng-container matColumnDef="accountId">
+            <th mat-header-cell *matHeaderCellDef>Account ID</th>
+            <td mat-cell *matCellDef="let twitterAccount">{{twitterAccount.accountId}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="twitterHandle">
+                <th mat-header-cell *matHeaderCellDef>Twitter Handle</th>
+                <td mat-cell *matCellDef="let twitterAccount"><a href="https://twitter.com/{{twitterAccount.twitterHandle}}" target="_blank" class="twitter_handle">{{twitterAccount.twitterHandle}}</a></td>
+            </ng-container>
+    
+            <ng-container matColumnDef="twitterId">
+                    <th mat-header-cell *matHeaderCellDef>Twitter ID</th>
+                    <td mat-cell *matCellDef="let twitterAccount">{{twitterAccount.twitterId}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="political">
+                        <th mat-header-cell *matHeaderCellDef>Political</th>
+                        <td mat-cell *matCellDef="let twitterAccount">{{twitterAccount.political}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="ideology">
+                            <th mat-header-cell *matHeaderCellDef>Ideology</th>
+                            <td mat-cell *matCellDef="let twitterAccount">{{twitterAccount.ideology}}</td>
+                        </ng-container>
+                        <ng-container matColumnDef="action">
+                                <th mat-header-cell *matHeaderCellDef>Action</th>
+                                <td mat-cell *matCellDef="let twitterAccount">{{twitterAccount.action}}</td>
+                            </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row;columns:displayedColumns;"></tr>
+    </table>
 </div>
