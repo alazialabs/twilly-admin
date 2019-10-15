@@ -9,6 +9,7 @@ import { BindingService } from "../../services/binding.service";
 })
 export class SidenavComponent implements OnInit {
   public treatmentConditions;
+  public selection;
   constructor(
     private adminService: AdminService,
     private bindingService: BindingService
@@ -20,10 +21,12 @@ export class SidenavComponent implements OnInit {
 
   select(treatmentCondition) {
     this.bindingService.selectTreatmentCondition(treatmentCondition);
+    this.selection=treatmentCondition.treatmentId;
   }
 
   openAddNew(){
     this.bindingService.openAddNew();
+    this.selection='add';
   }
 
   loadTreatmentConditions() {
@@ -32,7 +35,7 @@ export class SidenavComponent implements OnInit {
       .subscribe(treatmentConditions => {
         this.treatmentConditions = treatmentConditions;
         console.log(treatmentConditions);
-        this.select(this.treatmentConditions[0])
+        this.select(this.treatmentConditions[0]);
       });
   }
 }

@@ -19,6 +19,8 @@ import { SidenavComponent } from './home/sidenav/sidenav.component';
 import { HeaderComponent } from './home/header/header.component';
 import { TreatmentComponent } from './home/treatment/treatment.component';
 import { NewTreatmentComponent } from './home/new-treatment/new-treatment.component';
+import { TwitterAccountsTableComponent } from './home/twitter-accounts-table/twitter-accounts-table.component';
+import { UsersTableComponent } from './home/users-table/users-table.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { NewTreatmentComponent } from './home/new-treatment/new-treatment.compon
     SidenavComponent,
     HeaderComponent,
     TreatmentComponent,
-    NewTreatmentComponent
+    NewTreatmentComponent,
+    TwitterAccountsTableComponent,
+    UsersTableComponent
     ],
   imports: [
     HttpClientModule,

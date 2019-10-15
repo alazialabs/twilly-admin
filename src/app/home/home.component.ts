@@ -7,7 +7,7 @@ import {BindingService} from '../services/binding.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public showAddNew=true;
+  public showAddNew=false;
   public showTreatment=false;
   public selectedTreatmentCondition;
   constructor(private bindingService:BindingService) { }

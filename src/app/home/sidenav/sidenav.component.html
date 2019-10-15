@@ -1,13 +1,14 @@
 <div class="sidenav_container">
-<div class="sidenav_brand">
+    <div class="sidenav_brand">
         <img class="sidenav_brand_logo" src="../../assets/twilly.jpg">
         <span class="sidenav_brand_name">Twilly</span>
     </div>
     <div class="sidenav_list">
-        <div class="sidenav_list_element" (click)="openAddNew()">
+        <div class="sidenav_list_element" [ngClass]="selection=='add'?'selected':''" (click)="openAddNew()">
             <span>Add</span>
         </div>
-        <div *ngFor="let treatmentCondition of treatmentConditions" class="sidenav_list_element" (click)="select(treatmentCondition)">
+        <div *ngFor="let treatmentCondition of treatmentConditions" class="sidenav_list_element"
+            [ngClass]="selection==treatmentCondition.treatmentId?'selected':''" (click)="select(treatmentCondition)">
             <span>Treatment Condition {{treatmentCondition.treatmentId}}</span>
         </div>
     </div>

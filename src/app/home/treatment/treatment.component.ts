@@ -8,7 +8,7 @@ import { Component, OnInit,OnChanges, Input } from "@angular/core";
 export class TreatmentComponent implements OnInit {
   @Input() treatmentCondition: any;
   public twitterAccounts;
-  public displayedColumns=['accountId','twitterHandle','twitterId','political','ideology','action'];
+  public users;
   constructor() {}
 
   ngOnInit() {
