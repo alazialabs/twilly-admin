@@ -18,6 +18,24 @@ export class AdminService {
     return this.httpClient.get(this.path("listTreatmentConditions"));
   }
 
+  getUsers(){
+    return this.httpClient.get(this.path("getUsers"));
+  }
+
+  reset(data){
+    return this.httpClient.post(
+      this.path("reset"),
+      data
+    );
+  }
+
+  sendNotification(data){
+    return this.httpClient.post(
+      this.path("sendNotification"),
+      data
+    );
+  }
+
   createTreatmentConditionsFromFile(data) {
     return this.httpClient.post(
       this.path("createTreatmentConditionsFromFile"),

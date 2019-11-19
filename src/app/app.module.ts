@@ -14,6 +14,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatRippleModule} from '@angular/material/core';
 import {MatTableModule} from '@angular/material/table';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { SidenavComponent } from './home/sidenav/sidenav.component';
 import { HeaderComponent } from './home/header/header.component';
@@ -21,6 +24,8 @@ import { TreatmentComponent } from './home/treatment/treatment.component';
 import { NewTreatmentComponent } from './home/new-treatment/new-treatment.component';
 import { TwitterAccountsTableComponent } from './home/twitter-accounts-table/twitter-accounts-table.component';
 import { UsersTableComponent } from './home/users-table/users-table.component';
+import { NotificationDialogComponent } from './home/notification-dialog/notification-dialog.component';
+import { ResetDialogComponent } from './home/reset-dialog/reset-dialog.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,9 @@ import { UsersTableComponent } from './home/users-table/users-table.component';
     TreatmentComponent,
     NewTreatmentComponent,
     TwitterAccountsTableComponent,
-    UsersTableComponent
+    UsersTableComponent,
+    NotificationDialogComponent,
+    ResetDialogComponent
     ],
   imports: [
     HttpClientModule,
@@ -47,9 +54,13 @@ import { UsersTableComponent } from './home/users-table/users-table.component';
     MatButtonModule,
     MatSlideToggleModule,
     MatRippleModule,
-    MatTableModule
+    MatTableModule, 
+    MatExpansionModule,
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[NotificationDialogComponent, ResetDialogComponent]
 })
 export class AppModule { }

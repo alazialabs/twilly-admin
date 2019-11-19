@@ -7,6 +7,6 @@
     </aside>
     <main class="main">
         <app-new-treatment *ngIf="showAddNew"></app-new-treatment>
-        <app-treatment *ngIf="showTreatment" [treatmentCondition]="selectedTreatmentCondition"></app-treatment>
+        <app-treatment *ngIf="showTreatment" [treatmentCondition]="selectedTreatmentCondition" [treatmentUsers]="selectedTreatmentUsers"></app-treatment>
     </main>
 </div>

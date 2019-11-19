@@ -1,0 +1,8 @@
+<div>
+        <mat-form-field style="width:80%;">
+                <textarea matInput placeholder="Notification" [(ngModel)]="notificationBody"></textarea>
+            </mat-form-field>
+            <br/>
+            <br/>
+            <button [disabled]="!notificationBody" (click)="sendNotification()" mat-stroked-button>Send</button>
+      </div>

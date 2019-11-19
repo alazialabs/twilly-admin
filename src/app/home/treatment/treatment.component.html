@@ -2,8 +2,36 @@
     <h2>Treatment Condition {{treatmentCondition.treatmentId}}</h2>
     <mat-slide-toggle [(ngModel)]="treatmentCondition.demetricate" [disabled]="true">Allow demetrication
     </mat-slide-toggle>
-    <br /><br />
-    <div class="twitter_accounts_table_container mat-elevation-z1">
-        <app-twitter-accounts-table [twitterAccounts]="twitterAccounts"></app-twitter-accounts-table>
-    </div>
+    <br />
+    <br/>
+    <button (click)="openNotificationDialog()" mat-stroked-button>Send Notification</button>
+    <br/>
+    <br/>
+    <button (click)="openResetDialog()" mat-stroked-button>Reset Treatment Users</button>
+    <br/>
+    <br/>
+    <mat-accordion>
+        <mat-expansion-panel expanded="true" hideToggle="true">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Users
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="twitter_accounts_table_container ">
+              <app-users-table [users]="users"></app-users-table>
+          </div>
+          </mat-expansion-panel>
+        <mat-expansion-panel hideToggle="true">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Twitter Accounts
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="twitter_accounts_table_container ">
+            <app-twitter-accounts-table [twitterAccounts]="twitterAccounts"></app-twitter-accounts-table>
+        </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+<br/>
 </div>
+

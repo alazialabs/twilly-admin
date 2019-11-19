@@ -27,7 +27,5 @@ export class LoginComponent implements OnInit {
       }
     });
     console.log(credentials);
-    // this.router.navigate(['/home'])
-    // console.log('submit');
   }
 }

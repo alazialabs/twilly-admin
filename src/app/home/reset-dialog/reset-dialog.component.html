@@ -1,0 +1,8 @@
+<div mat-dialog-content>
+  <p>Do you wish to reset {{resetSubject}}?</p>
+  
+</div>
+<div mat-dialog-actions>
+  <button (click)="chooseYes()" mat-button color="warn">Yes</button>
+  <button (click)="chooseNo()" mat-button cdkFocusInitial>No</button>
+</div>
